@@ -1,0 +1,166 @@
+// GENERAL
+
+html {
+  font-family: $textFont;
+}
+
+header {
+  background-color: $headerColor;
+  font-family: $lobster2;
+  word-spacing: .3em;
+  color: $headerFontColor;
+  width: 100%;
+  height: 75px;
+  text-align: center;
+  border-bottom: 3px solid $headerBorderColor;
+}
+
+body {
+  background-color: $bodyBGColor;
+}
+
+h1 {
+  font-family: $lobster2;
+  word-spacing: .3em;
+  color: $headerFontColor;
+  margin-top: 0;
+  padding-bottom: 10px;
+  font-size: 3.5em;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  &:link {
+    color: $linkColor;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  &:visited {
+    color: $linkColor;
+  }
+}
+
+
+// SIDE NAV
+.sideNav{
+  width: 30%;
+  height: 800px;
+  float: left;
+  display: inline-block;
+  background-color: $headerColor;
+  border-right: 2px solid $headerBorderColor;
+  font-size: 3.5em;
+  ul {
+    list-style-type: none;
+  }
+}
+
+.wrapper {
+  width: 60%;
+  float: left;
+  margin-left: 5%;
+  display: inline-block;
+}
+
+.pr, .sarge, .ne, .char, .toby, .wedding, .wrapper, .sideNav, .mainWrapper {
+  display: none;
+}
+
+.activeSection {
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
+// ALBUM LISTINGS
+.mainWrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+h2 {
+  margin: 0 0 4px 0;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+
+// INNER ALBUMS
+.pics {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    float: left;
+    width: 28.3333%;
+    padding: 7px 10px 5px 10px;
+    margin: 1%;
+    background-color: $photoBorderColor;
+    &:nth-child(4n) {
+    clear: left;
+    a {
+      margin: 0;
+      padding: 5%;
+    }
+    }
+  }
+}
+
+// LIGHTBOXES
+.lightbox {
+   opacity: 0;
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: -100%;
+   left: 0;
+   color: $linkColor;
+   transition: opacity .5s ease-in-out;
+   &:target {
+     opacity: 1;
+     outline: none;
+     top: 0;
+  }
+  .box {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    min-width: 500px;
+    margin: 2% auto;
+    padding: 10px 20px 10px 20px;
+    background-color: $photoBorderColor;
+    box-shadow: 0px 1px 26px -3px #777777;
+  }
+  .caption {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 1.5em;
+  }
+  .exit {
+    display: block;
+    float: right;
+    font-size: 1.5em;
+  }
+}
+
+h3 {
+  margin: 7px 0;
+  font-size: .85em;
+}
+
+
+// FOOTER
+footer {
+  text-align: center;
+  clear: both;
+  margin-bottom: 10px;
+}

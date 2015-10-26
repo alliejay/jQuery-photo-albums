@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Lobster|Lobster+Two:400,400italic' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8" />
+
+<!-- TEMPLATE FOR ALBUM LISTINGS -->
+  <script type="text/html" id="listings">
+    <section class="allListings">
+      <ul class="pics"><li>
+          <a href="#" rel="<%= reL %>">
+            <h2><%= title %></h2>
+            <img src="<%= coverPic %>" class="singlePhoto"></a>
+        </li></ul>
+    </section>
+  </script>
+<!-- END TEMPLATE -->
+
+<!-- TEMPLATE FOR INSIDE ALBUMS     -->
+    <script type="text/html" id="innerAlbum">
+      <section data-index="">
+        <ul class="pics"><li>
+            <a href="#<%= idOne %>">
+              <img src="<%= picOne %>" class="singlePhoto">
+              <h3><%= capOne %></h3></a>
+          </li>
+        <li>
+            <a href="#<%= idTwo %>">
+              <img src="<%= picTwo %>" class="singlePhoto">
+              <h3><%= capTwo %></h3></a>
+          </li>
+        <li>
+            <a href="#<%= idThree %>">
+              <img src="<%= picThree %>" class="singlePhoto">
+              <h3><%= capThree %></h3></a>
+          </li></ul>
+      </section>
+<!-- END TEMPLATE -->
+
+<!-- TEMPLATE FOR LIGHTBOXES -->
+     <div class="lightbox" id="<%= idOne %>">
+        <div class="box">
+         <a class="exit" href="#">X</a>
+          <h3 class="caption"><%= capOne %></h3>
+          <div class="content">
+             <img src="<%= picOne %>">
+          </div>
+        </div>
+      </div>
+      <div class="lightbox" id="<%= idTwo %>">
+         <div class="box">
+          <a class="exit" href="#">X</a>
+           <h3 class="caption"><%= capTwo %></h3>
+           <div class="content">
+              <img src="<%= picTwo %>">
+           </div>
+         </div>
+       </div>
+       <div class="lightbox" id="<%= idThree %>">
+          <div class="box">
+           <a class="exit" href="#">X</a>
+            <h3 class="caption"><%= capThree %></h3>
+            <div class="content">
+               <img src="<%= picThree %>">
+            </div>
+          </div>
+        </div>
+    </script>
+<!-- END TEMPLATE -->
+
+<!-- TEMPLATE FOR ALBUM TITLES -->
+  <script type="text/html" id="albumTitle">
+  <h1><%= title %></h1>
+  </script>
+<!-- END TEMPLATE -->
+
+  </head>
+
+  <body>
+    <header class="">
+      <h1>My Photo Albums</h1>
+    </header>
+
+    <div class="mainWrapper activeSection">
+      <footer>
+        &copy; Alison Arsenault 2015
+      </footer>
+    </div>
+
+    <aside class="sideNav">
+      <nav>
+        <ul>
+          <li><a href="" rel="home" id="home">Home</a></li>
+          <li><a href="" rel="pr">Puerto Rico</a></li>
+          <li><a href="" rel="ne">New England</a></li>
+          <li><a href=""  rel="char">Charleston</a></li>
+          <li><a href="" rel="toby">Toby</a></li>
+          <li><a href="" rel="sarge">Sarge</a></li>
+          <li><a href="" rel="wedding">Wedding</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="wrapper">
+      <section rel="home" class="home"> </section>
+      <section rel="pr" class="pr"></section>
+      <section rel="sarge" class="sarge"></section>
+      <section rel="ne" class="ne"></section>
+      <section rel="char" class="char"></section>
+      <section rel="toby" class="toby"></section>
+      <section rel="wedding" class="wedding"></section>
+
+      <footer>
+        &copy; Alison Arsenault 2015
+      </footer>
+    </div>
+
+<!-- LIBRARIES   -->
+    <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+
+<!-- SCRIPTS     -->
+    <script type="text/javascript" src="albumData.js"></script>
+    <script type="text/javascript" src="photo-album.js"></script>
+
+  </body>
+</html>
